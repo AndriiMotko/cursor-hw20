@@ -1,11 +1,10 @@
 import styled from "styled-components";
-import React from "react";
 
-export const WrapperSignIn = styled.div`
+export const WrapperSignForm = styled.div`
 	display: flex;
 	flex-flow: column nowrap;
 	align-items: center;
-	margin: 50px 0 50px 0;
+	margin: 50px 0 20px 0;
 	color: rgb(255, 255, 255);
 `;
 
@@ -24,11 +23,11 @@ export const RegIcon = styled.img`
 	height: 60%;
 `;
 
-export const SignInStatus = styled.h2`
+export const SignStatus = styled.h2`
 	font-size: 18px;
 	font-weight: 400;
 	letter-spacing: 0.8px;
-    margin: 10px 0 10px 0;
+	margin: 10px 0 10px 0;
 `;
 
 export const WrapperForm = styled.div`
@@ -42,7 +41,8 @@ export const WrapperForm = styled.div`
 export const InputFormLine = styled.input`
 	width: 175px;
 	background-color: rgb(14, 14, 14);
-	border: 1.5px solid rgba(50, 50, 51, 0.8);
+	border: 1.5px solid;
+	border-color: ${(props) => props.borderColor};
 	border-radius: 5px;
 	padding: 8px 5px 8px 5px;
 	margin: 7px 0 7px 0;
@@ -51,7 +51,7 @@ export const InputFormLine = styled.input`
 	font-weight: 400;
 	letter-spacing: 0.8px;
 	&:focus {
-		outline-color: rgba(50, 50, 51, 0.8);
+		outline: none;
 	}
 `;
 
@@ -60,49 +60,64 @@ export const InputFormEmailLine = styled(InputFormLine)`
 `;
 export const InputFormPasswordLine = styled(InputFormEmailLine)``;
 
-const WrapperAgreement = styled.div`
+export const WrapperAgreement = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: left;
 	margin: 10px 0 10px 0;
 `;
 
-const AgreeInput = styled.input`
+export const AgreeInput = styled.input`
 	width: 15px;
 	height: 15px;
 	margin: 0 15px 0 0;
 `;
 
-const LabelAgreeInput = styled.label`
+export const LabelAgreeInput = styled.label`
 	font-size: 13px;
-	padding: 0 10px 0 10px;
+	padding: 0 10px 0 5px;
 	color: rgba(255, 255, 255, 0.85);
+	letter-spacing: 0.25px;
 `;
 
-export function AgreementCheckBox() {
-	return (
-		<WrapperAgreement>
-			<AgreeInput type="checkbox" label="AgreementCheckBox" />
-			<LabelAgreeInput htmlFor="AgreementCheckBox">
-				I want to receive inspiration, marketing promotion and updates via
-				email.
-			</LabelAgreeInput>
-		</WrapperAgreement>
-	);
-}
-
-export const SignInButton = styled.button`
+export const SignButton = styled.button`
 	width: 100%;
-	background-image: linear-gradient(to right, #77A1D3 0%, #79CBCA  51%, #77A1D3  100%);
-    margin: 10px 0 10px 0;
-    padding: 5px 0 5px 0;
-    border: none;
-    border-radius: 5px;
-    font-size: 14px;
-    font-weight: 400;
-    text-transform: uppercase;
-    &:hover {
-        cursor: pointer;
-    }
+	background-image: linear-gradient(
+		to right,
+		#77a1d3 0%,
+		#79cbca 51%,
+		#77a1d3 100%
+	);
+	margin: 10px 0 5px 0;
+	padding: 5px 0 5px 0;
+	border: none;
+	border-radius: 5px;
+	color: rgb(0, 0, 0);
+	font-size: 14px;
+	font-weight: 600;
+	text-transform: uppercase;
+	&:hover {
+		cursor: pointer;
+	}
+`;
+export const WrapperNavigation = styled.div`
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-end;
+	align-items: center;
+	width: 100%;
+`;
 
+export const NavigationLink = styled.a`
+	color: #79cbca;
+	font-size: 11px;
+	text-decoration: none;
+	align-self: flex-end;
+	margin: 0 5px 0 5px;
+`;
+
+export const Rights = styled.div`
+	margin: 25px 0 10px 0;
+	font-size: 11px;
+	color: rgb(96, 96, 96);
 `;

@@ -1,8 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+@font-face {
+	font-family: "RingbearerMedium";
+	src: url("../src/assets/fonts/RingbearerMedium.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
 
 body {
-  width: 400px;
-  margin: 0 auto;
-  font-family: 'Roboto', sans-serif;
-  background-color: rgb(14, 14, 14);
+	width: 400px;
+	margin: 0 auto;
+	font-family: "Roboto", sans-serif;
+	background-color: rgb(14, 14, 14);
 }
